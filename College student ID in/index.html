@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Digi Card Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background">
+    <span class="circle circle1"></span>
+    <span class="circle circle2"></span>
+    <span class="circle circle3"></span>
+    <span class="circle circle4"></span>
+</div>
+
+
+<header>
+
+    <div class="logo">
+        <div class="logo-icon">🎓</div>
+
+        <div>
+            <h2>Digi Card</h2>
+            <p>College ID Generator</p>
+        </div>
+    </div>
+
+    <div class="live">
+        <span></span>
+        Live Preview
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- ================= LEFT FORM ================= -->
+
+    <section class="form-section">
+
+        <div class="section-title">
+
+            <div class="title-icon">✏️</div>
+
+            <div>
+                <h1>Create Your College ID</h1>
+                <p>Enter your details and see your ID card instantly.</p>
+            </div>
+
+        </div>
+
+
+        <form id="cardForm">
+
+
+            <!-- PHOTO -->
+
+            <div class="form-group">
+
+                <label>📷 Profile Photo</label>
+
+                <div class="upload-area">
+
+                    <img
+                        id="uploadedImage"
+                        src="https://via.placeholder.com/150"
+                        alt="Profile"
+                    >
+
+                    <div>
+
+                        <label
+                            for="photo"
+                            class="upload-button"
+                        >
+                            Choose Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="photo"
+                            accept="image/*"
+                        >
+
+                        <small>
+                            JPG / PNG / JPEG
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label>👤 Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    value="Hemanth Kumar"
+                    placeholder="Enter full name"
+                >
+
+            </div>
+
+
+            <!-- STUDENT ID -->
+
+            <div class="form-group">
+
+                <label>🆔 Student ID / Roll Number</label>
+
+                <input
+                    type="text"
+                    id="studentId"
+                    value="STU2026001"
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label>📧 Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    value="hemanth@example.com"
+                >
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label>📱 Phone</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    value="+91 9876543210"
+                >
+
+            </div>
+
+
+            <!-- DOB -->
+
+            <div class="form-group">
+
+                <label>📅 Date of Birth</label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    value="2004-05-20"
+                >
+
+            </div>
+
+
+            <!-- GENDER -->
+
+            <div class="form-group">
+
+                <label>⚧ Gender</label>
+
+                <select id="gender">
+
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DEPARTMENT -->
+
+            <div class="form-group">
+
+                <label>🏢 Department</label>
+
+                <select id="department">
+
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Artificial Intelligence</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- COURSE -->
+
+            <div class="form-group">
+
+                <label>🎓 Course / Program</label>
+
+                <input
+                    type="text"
+                    id="course"
+                    value="B.Tech Computer Science"
+                >
+
+            </div>
+
+
+            <!-- YEAR -->
+
+            <div class="form-group">
+
+                <label>📚 Year / Semester</label>
+
+                <select id="year">
+
+                    <option>1st Year - 1st Semester</option>
+                    <option>1st Year - 2nd Semester</option>
+                    <option>2nd Year - 1st Semester</option>
+                    <option>2nd Year - 2nd Semester</option>
+                    <option>3rd Year - 1st Semester</option>
+                    <option>3rd Year - 2nd Semester</option>
+                    <option>4th Year - 1st Semester</option>
+                    <option>4th Year - 2nd Semester</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BLOOD -->
+
+            <div class="form-group">
+
+                <label>🩸 Blood Group</label>
+
+                <select id="blood">
+
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- COLLEGE -->
+
+            <div class="form-group">
+
+                <label>🏫 College Name</label>
+
+                <input
+                    type="text"
+                    id="college"
+                    value="ABC Institute of Technology"
+                >
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="form-group">
+
+                <label>📍 College Address</label>
+
+                <textarea id="address">Guntur, Andhra Pradesh, India</textarea>
+
+            </div>
+
+
+            <!-- ACADEMIC -->
+
+            <div class="form-group">
+
+                <label>📖 Academic Year</label>
+
+                <input
+                    type="text"
+                    id="academic"
+                    value="2026 - 2027"
+                >
+
+            </div>
+
+
+            <!-- EMERGENCY -->
+
+            <div class="form-group">
+
+                <label>🚨 Emergency Contact</label>
+
+                <input
+                    type="tel"
+                    id="emergency"
+                    value="+91 9000000000"
+                >
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button
+                    type="button"
+                    id="flipBtn"
+                    class="primary-button"
+                >
+                    🔄 Flip ID
+                </button>
+
+                <button
+                    type="button"
+                    id="resetBtn"
+                    class="secondary-button"
+                >
+                    🔄 Reset
+                </button>
+
+                <button
+                    type="button"
+                    id="printBtn"
+                    class="print-button"
+                >
+                    🖨️ Print
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ================= RIGHT PREVIEW ================= -->
+
+    <section class="preview-section">
+
+
+        <div class="preview-header">
+
+            <div>
+
+                <h2>Live Preview</h2>
+
+                <p>
+                    Front & Back Digital ID Card
+                </p>
+
+            </div>
+
+            <div
+                class="side-badge"
+                id="sideBadge"
+            >
+                FRONT
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= 3D CARD ================= -->
+
+        <div class="card-area">
+
+            <div
+                class="id-card"
+                id="idCard"
+            >
+
+
+                <!-- ================= FRONT ================= -->
+
+                <div class="card-face front">
+
+                    <div class="card-header">
+
+                        <div class="college-logo">
+                            🎓
+                        </div>
+
+                        <div>
+
+                            <h2 id="cardCollege">
+                                ABC Institute of Technology
+                            </h2>
+
+                            <p>
+                                STUDENT IDENTITY CARD
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="front-body">
+
+                        <div class="photo-box">
+
+                            <img
+                                id="cardPhoto"
+                                src="https://via.placeholder.com/150"
+                            >
+
+                        </div>
+
+
+                        <div class="student-details">
+
+                            <h1 id="cardName">
+                                Hemanth Kumar
+                            </h1>
+
+
+                            <div class="student-id">
+
+                                ID:
+                                <span id="cardStudentId">
+                                    STU2026001
+                                </span>
+
+                            </div>
+
+
+                            <div class="detail">
+
+                                <span>Course</span>
+
+                                <strong id="cardCourse">
+                                    B.Tech Computer Science
+                                </strong>
+
+                            </div>
+
+
+                            <div class="detail">
+
+                                <span>Department</span>
+
+                                <strong id="cardDepartment">
+                                    Computer Science
+                                </strong>
+
+                            </div>
+
+
+                            <div class="detail">
+
+                                <span>Year</span>
+
+                                <strong id="cardYear">
+                                    1st Year - 1st Semester
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact">
+
+                        <span>
+                            📧
+                            <b id="cardEmail">
+                                hemanth@example.com
+                            </b>
+                        </span>
+
+                        <span>
+                            📱
+                            <b id="cardPhone">
+                                +91 9876543210
+                            </b>
+                        </span>
+
+                    </div>
+
+
+                    <div class="front-footer">
+
+                        <div>
+
+                            <small>Blood Group</small>
+
+                            <strong id="cardBlood">
+                                A+
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>Academic Year</small>
+
+                            <strong id="cardAcademic">
+                                2026 - 2027
+                            </strong>
+
+                        </div>
+
+
+                        <div class="qr">
+                            ▦
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= BACK ================= -->
+
+                <div class="card-face back">
+
+
+                    <div class="card-header">
+
+                        <div class="college-logo">
+                            🎓
+                        </div>
+
+                        <div>
+
+                            <h2 id="backCollege">
+                                ABC Institute of Technology
+                            </h2>
+
+                            <p>
+                                STUDENT INFORMATION
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="back-body">
+
+                        <h3>
+                            STUDENT DETAILS
+                        </h3>
+
+
+                        <div class="back-detail">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="backName">
+                                Hemanth Kumar
+                            </strong>
+
+                        </div>
+
+
+                        <div class="back-detail">
+
+                            <span>
+                                Student ID
+                            </span>
+
+                            <strong id="backStudentId">
+                                STU2026001
+                            </strong>
+
+                        </div>
+
+
+                        <div class="back-detail">
+
+                            <span>
+                                Date of Birth
+                            </span>
+
+                            <strong id="cardDob">
+                                20/05/2004
+                            </strong>
+
+                        </div>
+
+
+                        <div class="back-detail">
+
+                            <span>
+                                Gender
+                            </span>
+
+                            <strong id="cardGender">
+                                Male
+                            </strong>
+
+                        </div>
+
+
+                        <div class="back-detail">
+
+                            <span>
+                                Blood Group
+                            </span>
+
+                            <strong id="backBlood">
+                                A+
+                            </strong>
+
+                        </div>
+
+
+                        <div class="back-detail">
+
+                            <span>
+                                Emergency Contact
+                            </span>
+
+                            <strong id="cardEmergency">
+                                +91 9000000000
+                            </strong>
+
+                        </div>
+
+
+                        <div class="address">
+
+                            📍
+
+                            <span id="cardAddress">
+                                Guntur, Andhra Pradesh, India
+                            </span>
+
+                        </div>
+
+
+                        <div class="emergency">
+
+                            🚨
+
+                            <div>
+
+                                <small>
+                                    EMERGENCY CONTACT
+                                </small>
+
+                                <strong id="backEmergency">
+                                    +91 9000000000
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="signatures">
+
+                            <span>
+                                Student Signature
+                            </span>
+
+                            <span>
+                                Authorized Signature
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="back-footer">
+
+                        If found, please return this card to the college office.
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="flip-message">
+
+            💡 Click <b>Flip ID</b> to see the back side
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Digi Card Generator
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
